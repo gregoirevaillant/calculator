@@ -26,3 +26,35 @@ function operate(operator, a, b) {
       return divide(a, b);
   }
 }
+
+let buttons = document.querySelectorAll('button');
+let clickedValue = '';
+let display = document.querySelector('#displayValue');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        clickedValue += e.target.innerText;
+        display.innerText = clickedValue;
+    });
+    }
+);
+
+let operators = document.querySelectorAll('.operator');
+let clickedOperator = '';
+
+operators.forEach((operator) => {
+    operator.addEventListener('click', (e) => {
+        clickedOperator = e.target.innerText;
+    });
+    }
+);
+
+let equals = document.querySelector('#equals');
+
+equals.addEventListener('click', () => {
+    let values = clickedValue.split(clickedOperator);
+    let a = values[0];
+    let b = values[1];
+    display.innerText = operate(clickedOperator, a, b);
+    }   
+);
