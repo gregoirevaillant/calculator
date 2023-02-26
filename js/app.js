@@ -53,8 +53,9 @@ let equals = document.querySelector('#equals');
 
 equals.addEventListener('click', () => {
     let values = clickedValue.split(clickedOperator);
-    let a = values[0];
-    let b = values[1];
+    console.log(values);
+    let a = parseFloat(values[0]);
+    let b = parseFloat(values[1]);
     display.innerText = operate(clickedOperator, a, b);
     }   
 );
