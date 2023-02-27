@@ -12,19 +12,19 @@ body {
   line-height: 1.5;
   color: #f0f0f0;
   background: #4d4d4d;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 #calculator {
-  width: 100%;
-  max-width: 400px;
   margin: 0 auto;
   padding: 20px;
   background: #333;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 #calculatorButtons {
@@ -37,12 +37,12 @@ body {
   width: 50px;
   height: 50px;
   border: none;
-  border-radius: 5px;
-  background: #F0F0F0;
+  border-radius: 50px;
+  background: #f0f0f0;
   color: #333;
   font-size: 1.5rem;
   cursor: pointer;
-  box-shadow: #F0F0F040 0 0 10px 0;
+  box-shadow: #f0f0f040 0 0 10px 0;
 }
 
 #calculatorButtons button:hover {
@@ -51,4 +51,64 @@ body {
 
 #calculatorButtons button:active {
   background: #999;
+}
+
+/* Calculator Screen */
+
+#calculatorScreen {
+  width: 100%;
+  height: 100px;
+  background: #f0f0f0;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-shadow: #f0f0f040 0 0 10px 0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#calculatorScreen #displayFront {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  text-align: right;
+  color: #333;
+}
+
+#calculatorScreen #displayBack {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  text-align: right;
+  color: #333;
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+a {
+  color: #f0f0f0;
+  text-decoration: none;
+}
+
+.fa-github {
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: scale(1.2);
 }

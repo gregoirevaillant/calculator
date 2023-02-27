@@ -6,35 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator - Grégoire</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="calculator">
       <div id="calculatorScreen">
-        <span id="displayValue">0</span>
+        <span id="displayBack"></span>
+        <span id="displayFront">0</span>
       </div>
       <div id="calculatorButtons">
-        <button class="button" id="clear">C</button>
+        <button class="button" id="clearButton">C</button>
         <button class="button blank"></button>
         <button class="button blank"></button>
-        <button class="button operator" id="divide">/</button>
-        <button class="button">7</button>
-        <button class="button">8</button>
-        <button class="button">9</button>
-        <button class="button operator" id="multiply">*</button>
-        <button class="button">4</button>
-        <button class="button">5</button>
-        <button class="button">6</button>
-        <button class="button operator" id="substract">-</button>
-        <button class="button">1</button>
-        <button class="button">2</button>
-        <button class="button">3</button>
-        <button class="button operator" id="add">+</button>
-        <button class="button">0</button>
-        <button class="button">.</button>
+        <button class="button" dataOperator>/</button>
+        <button class="button" dataNumber>7</button>
+        <button class="button" dataNumber>8</button>
+        <button class="button" dataNumber>9</button>
+        <button class="button" dataOperator>*</button>
+        <button class="button" dataNumber>4</button>
+        <button class="button" dataNumber>5</button>
+        <button class="button" dataNumber>6</button>
+        <button class="button" dataOperator>-</button>
+        <button class="button" dataNumber>1</button>
+        <button class="button" dataNumber>2</button>
+        <button class="button" dataNumber>3</button>
+        <button class="button" dataOperator>+</button>
+        <button class="button" dataNumber>0</button>
+        <button class="button" id="decimalButton">.</button>
         <button class="button blank"></button>
-        <button class="button" id="equals">=</button>
+        <button class="button" id="equalsButton">=</button>
       </div>
     </div>
+    <footer>
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        gregoirevaillant
+        <a href="https://github.com/gregoirevaillant" target="_blank">
+          <i class="fab fa-github"></i
+        ></a>
+      </p>
+    </footer>
     <script src="./js/app.js"></script>
   </body>
 </html>
